@@ -12,6 +12,7 @@ Use this skill for image 2 date-scene generations where the user cares about a r
 - Speak Chinese to the user when the surrounding task is Chinese.
 - Always confirm the exact prompt before generating unless the user explicitly says to generate immediately.
 - Never put API keys, endpoint keys, or user secrets into skill files, prompts, logs, or final responses.
+- Use `gpt-image-2` as the default fixed model name. Do not change models unless the user explicitly requests it.
 - Prefer reference images over long textual costume descriptions when the user has a specific image.
 - Use detailed prompts for continuity, exact outfits, real locations, and multi-prop date scenes. Do not use one-sentence prompts for these tasks unless the user explicitly asks for a controlled comparison experiment.
 - Preserve safety by keeping romantic/date scenes non-explicit and avoiding childlike framing.
