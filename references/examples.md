@@ -3,7 +3,7 @@
 ## Detailed Restaurant Date Prompt
 
 ```text
-Use the previous image as the identity and continuity reference: keep the same real-life coser, same face, hairstyle, body proportions, outfit direction, and overall appearance. Use the outfit reference image as the exact clothing design reference; do not use a generic or classic version of the character.
+Use the previous image as the identity and continuity reference: keep the same real-life coser, same face, facial features, hairstyle, hair color, body proportions, figure/silhouette, outfit direction, and overall appearance. Use the character/outfit reference image as the coser appearance and exact clothing design reference; do not use a generic or classic version of the character.
 
 Create a photorealistic first-person vertical smartphone photo in a Hangzhou American steakhouse. Across the table sits the same coser wearing a realistic commissioned cosplay version of the reference outfit. Keep the outfit recognizable and detailed.
 
@@ -19,7 +19,7 @@ Avoid: generic outfit, anime rendering, illustration, CGI, plastic skin, studio 
 ## In77 520 Walking Prompt
 
 ```text
-Use the previous restaurant image as the identity and continuity reference. Use the original outfit image as the exact clothing design reference. Use the in77 scene reference image as the architectural and location reference: match the night plaza, tall illuminated glass-grid building, white sculptural luxury storefront cube, broad open stone-paved square, circular paving lines, embedded ground lights, and people walking around the plaza.
+Use the previous restaurant image as the identity and continuity reference: preserve the same real-life coser, face, hairstyle, hair color, body proportions, figure/silhouette, and overall appearance. Use the original character/outfit image as the exact coser appearance and clothing design reference. Use the in77 scene reference image as the architectural and location reference: match the night plaza, tall illuminated glass-grid building, white sculptural luxury storefront cube, broad open stone-paved square, circular paving lines, embedded ground lights, and people walking around the plaza.
 
 Create a photorealistic first-person vertical smartphone photo after dinner, walking around Hubin Yintai in77 in Hangzhou on May 20, 2026, 520 Valentine's Day evening. The same coser is walking in front of the photographer through the crowded shopping district, holding the photographer's hand and gently pulling them forward, while turning her head back to look at the phone camera. The joined hands appear in the lower foreground.
 

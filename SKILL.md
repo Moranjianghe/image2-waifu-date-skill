@@ -25,7 +25,7 @@ Use this skill for image 2 date-scene generations where the user cares about a r
    - Continuity requirements: same person, same outfit, same relationship POV.
    - Optional accessories for the user to choose: handbag, phone, flowers, shopping bags, jewelry, plush, drinks, or other props.
 2. Summarize what each image controls:
-   - Identity continuity controls face, vibe, hair, body proportions, and prior styling.
+   - Identity/character reference controls face, facial features, hairstyle, hair color, expression style, body proportions, figure/silhouette, vibe, and prior styling.
    - Outfit reference controls costume and accessories.
    - Scene reference controls architecture, lighting, crowd density, and local details.
 3. Ask the user to choose optional accessories when the scene could include props. Do not add handbag, phone, flowers, or shopping bags by default unless the user already requested them or they are visible in a reference image.
@@ -53,7 +53,7 @@ Use this order for detailed prompts:
 
 ```text
 Reference roles:
-Use <identity image> as identity and continuity reference.
+Use <identity/character image> as the coser appearance, face, hairstyle, body proportions, figure/silhouette, and continuity reference.
 Use <outfit image> as exact clothing/design reference.
 Use <scene image> as architectural/location reference.
 
@@ -61,7 +61,7 @@ Primary scene:
 <date scenario, date/time, city, season, activity>
 
 Character:
-<same person/coser, pose, expression, relation to photographer>
+<same person/coser, appearance and body shape based on character reference, pose, expression, relation to photographer>
 
 Outfit:
 <specific reference outfit instructions; do not use generic/classic alternate versions>
@@ -88,6 +88,7 @@ For "same person" requests, include:
 
 - Same face and overall appearance from the prior image.
 - Same hair color, hairstyle, ornaments, and body proportions.
+- Same figure/silhouette and body-shape impression from the character reference, while keeping the result realistic.
 - Same outfit direction unless the user asks to change clothes.
 - Same relationship POV if established, such as dinner date, walking together, or being led by hand.
 - A realistic transition between scenes, such as "after dinner" or "later that evening".
