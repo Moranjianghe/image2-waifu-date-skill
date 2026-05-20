@@ -32,10 +32,14 @@ Composition: vertical smartphone snapshot, casual tilted handheld framing, mild 
 Avoid: generic mall street, empty plaza, daytime lighting, winter clothing, perfectly frozen action, anime, CGI, plastic skin, deformed hands, watermark.
 ```
 
-## Minimal Prompt Experiment
+## Deprecated Minimal Prompt Pattern
 
-Use this only when testing whether image 2 can infer more from references with less text:
+Do not use this pattern for normal waifu/date continuity work. Testing showed that a one-sentence prompt is usually not suitable for exact outfit fidelity, same-person continuity, real-location matching, props, motion blur, and phone-photo realism.
+
+Keep this only as a negative example or for a user-requested comparison experiment:
 
 ```text
 参考图中的人物设定、容貌身材和服装，生成一张写实的第一人称手机拍照：在杭州美式牛排馆和这位东雪莲 coser 吃厚切美式牛排晚餐，画面要有真实手机随手拍特征，不要沙拉、不要动漫感、不要水印文字。
 ```
+
+Prefer the detailed restaurant or in77 prompts above.

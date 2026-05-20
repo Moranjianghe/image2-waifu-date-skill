@@ -13,7 +13,7 @@ Use this skill for image 2 date-scene generations where the user cares about a r
 - Always confirm the exact prompt before generating unless the user explicitly says to generate immediately.
 - Never put API keys, endpoint keys, or user secrets into skill files, prompts, logs, or final responses.
 - Prefer reference images over long textual costume descriptions when the user has a specific image.
-- Use detailed prompts when the user wants precise continuity; use one-sentence prompts only as an experiment or when the user requests minimal prompting.
+- Use detailed prompts for continuity, exact outfits, real locations, and multi-prop date scenes. Do not use one-sentence prompts for these tasks unless the user explicitly asks for a controlled comparison experiment.
 - Preserve safety by keeping romantic/date scenes non-explicit and avoiding childlike framing.
 
 ## Workflow
@@ -32,6 +32,18 @@ Use this skill for image 2 date-scene generations where the user cares about a r
 5. Generate with all relevant reference images if the image endpoint supports edits/multi-image inputs.
 6. Save each result with a semantic filename. Do not overwrite prior generations unless asked.
 7. Report saved path, size, model, and any fallback behavior.
+
+For API execution, follow the download and `response_format="b64_json"` policy in `$image2-general-generator`. Compatible endpoints may return signed URLs that fail with 403 or timeout; prefer base64 responses when possible.
+
+## Prompt Length Policy
+
+For waifu/date continuity tasks, default to a structured detailed prompt. Prior testing showed that a one-sentence prompt can under-specify character continuity, outfit fidelity, location details, props, and camera behavior, even when reference images are supplied.
+
+Use a one-sentence prompt only when:
+
+- The user explicitly requests a minimal-prompt comparison.
+- The task is a loose brainstorming draft where continuity and exact scene matching do not matter.
+- You clearly label it as experimental and ask before generating.
 
 ## Prompt Structure
 
@@ -132,4 +144,4 @@ Read [examples.md](references/examples.md) when you need reusable prompt templat
 
 - A detailed restaurant date prompt.
 - A detailed in77 520 walking prompt.
-- A minimal one-sentence prompt for comparison.
+- A deprecated minimal prompt note explaining why it should usually be avoided.
