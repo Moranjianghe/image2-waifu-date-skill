@@ -22,16 +22,18 @@ Use this skill for image 2 date-scene generations where the user cares about a r
    - Character identity reference: previous generated image or user-supplied person/coser image.
    - Outfit/design reference: character sheet, costume image, or clothing image.
    - Scene/location reference: real place photo, storefront, restaurant, street, or mall.
-   - Continuity requirements: same person, same outfit, same props, same relationship POV.
+   - Continuity requirements: same person, same outfit, same relationship POV.
+   - Optional accessories for the user to choose: handbag, phone, flowers, shopping bags, jewelry, plush, drinks, or other props.
 2. Summarize what each image controls:
    - Identity continuity controls face, vibe, hair, body proportions, and prior styling.
    - Outfit reference controls costume and accessories.
    - Scene reference controls architecture, lighting, crowd density, and local details.
-3. Draft the prompt in English for image 2, then provide a Chinese translation or Chinese summary for the user.
-4. Ask for confirmation before the API call.
-5. Generate with all relevant reference images if the image endpoint supports edits/multi-image inputs.
-6. Save each result with a semantic filename. Do not overwrite prior generations unless asked.
-7. Report saved path, size, model, and any fallback behavior.
+3. Ask the user to choose optional accessories when the scene could include props. Do not add handbag, phone, flowers, or shopping bags by default unless the user already requested them or they are visible in a reference image.
+4. Draft the prompt in English for image 2, then provide a Chinese translation or Chinese summary for the user.
+5. Ask for confirmation before the API call.
+6. Generate with all relevant reference images if the image endpoint supports edits/multi-image inputs.
+7. Save each result with a semantic filename. Do not overwrite prior generations unless asked.
+8. Report saved path, size, model, and any fallback behavior.
 
 For API execution, follow the download and `response_format="b64_json"` policy in `$image2-general-generator`. Compatible endpoints may return signed URLs that fail with 403 or timeout; prefer base64 responses when possible.
 
@@ -74,7 +76,7 @@ Camera realism:
 <vertical smartphone photo, HDR, auto white balance, wide-angle perspective, low-light noise, motion blur>
 
 Props:
-<bag, phone, bouquet, food, shopping bags; natural placement>
+<only user-selected props such as handbag, phone, bouquet, food, shopping bags; natural placement>
 
 Avoid:
 <wrong outfit, wrong location, empty scene, anime/CGI, deformed hands, watermark, unwanted text/logo rules>
@@ -115,7 +117,17 @@ Use table foreground, partial photographer hand or phone edge, food close to len
 
 ### Shopping District
 
-Use walking POV, companion ahead holding photographer's hand, looking back toward camera. Include crowd density, couples, flowers, shopping bags, seasonal weather, storefront lighting, reflections, and location-specific architecture.
+Use walking POV, companion ahead holding photographer's hand, looking back toward camera. Include crowd density, couples, seasonal weather, storefront lighting, reflections, and location-specific architecture. Add flowers, shopping bags, phone, handbag, or other accessories only when the user selects them or they appear in references.
+
+## Optional Accessories
+
+Treat accessories as user choices, not defaults. Before finalizing a date-scene prompt, offer a concise optional list when relevant:
+
+```text
+Optional accessories: handbag, phone, flowers, shopping bags, drink, jewelry, plush toy. Which should be included?
+```
+
+If the user has already specified accessories, include exactly those and avoid adding extra props that may distract from the character or location.
 
 ### Location Reference
 
@@ -127,15 +139,16 @@ Match the night plaza, tall illuminated glass-grid building, white sculptural lu
 
 ## Brand and Logo Handling
 
-Ask the user whether to preserve real storefront logos if the scene reference contains them.
+Do not ask the user whether to preserve real storefront logos by default. If a real location reference contains storefront signage or logos, preserve them as part of the real scene unless the user explicitly asks to hide them or avoid readable text.
 
-- Conservative default: avoid readable logos and brand text to reduce garbling.
-- If the user wants the real logo: explicitly preserve only the real signage from the reference and remove "avoid readable logos" constraints.
+- Default: preserve real location signage and logos from the reference.
+- Do not invent extra unrelated brand signs.
+- If the user explicitly asks to hide logos or avoid readable text, add a no-readable-logo/no-readable-text constraint.
 
 Example:
 
 ```text
-Keep the Louis Vuitton storefront cube from the reference image recognizable, including the illuminated LV monogram and Louis Vuitton signage as part of the real location background.
+Keep the Louis Vuitton storefront cube from the reference image recognizable, including the illuminated LV monogram and Louis Vuitton signage as part of the real location background. Do not invent extra unrelated brand signs.
 ```
 
 ## Reference Examples

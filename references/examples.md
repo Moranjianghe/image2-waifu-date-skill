@@ -23,7 +23,7 @@ Use the previous restaurant image as the identity and continuity reference. Use 
 
 Create a photorealistic first-person vertical smartphone photo after dinner, walking around Hubin Yintai in77 in Hangzhou on May 20, 2026, 520 Valentine's Day evening. The same coser is walking in front of the photographer through the crowded shopping district, holding the photographer's hand and gently pulling them forward, while turning her head back to look at the phone camera. The joined hands appear in the lower foreground.
 
-Scene: in77 plaza at night, early summer, many couples and pedestrians, flower bouquets, gift bags, romantic store displays, bright shop windows, wet or reflective pavement if weather fits, city-center night lighting.
+Scene: in77 plaza at night, early summer, many couples and pedestrians, romantic store displays, bright shop windows, wet or reflective pavement if weather fits, city-center night lighting. Add flower bouquets or gift bags only if the user selected those accessories.
 
 Motion: include realistic low-light walking motion blur. Background pedestrians are streaked or blurred, nearby lights have slight trails, moving hands/arms/hair/ribbons have mild blur. Keep her face recognizable but not studio-sharp.
 
