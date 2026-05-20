@@ -1,0 +1,4 @@
+interface:
+  display_name: "Image 2 Waifu Date"
+  short_description: "Build consistent waifu date image prompts"
+  default_prompt: "Use $image2-waifu-date to plan and generate a consistent waifu date image prompt."
